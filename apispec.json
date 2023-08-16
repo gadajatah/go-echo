@@ -1,0 +1,54 @@
+{
+"openapi": "3.0.3",
+"info": {
+    "title": "User RESTful API",
+    "description": "API spec for User RESTful API",
+    "version": "1.0.0"
+},
+"servers": [
+    {
+        "url": "http:://localhost:1323"
+    }
+],
+"paths": {
+    "/users": {
+        "get": {
+            "description": "List all users",
+            "responses": {
+                "200": {
+                    "description": "Success get all users",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "number"
+                                    },
+                                    "status": {
+                                        "type": "string"
+                                    },
+                                    "data": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "number"
+                                                },
+                                                "name": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}
